@@ -1,0 +1,97 @@
+body{ /* c'è un solo body*/
+    margin: 0;
+    background-color: rgb(110, 168, 239);
+    color: white;
+}
+
+#navbar{
+    background-color: rgb(110, 168, 239);
+    height: calc(8vh + 2vw);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#navbar .nav-link{
+    font-weight: bold;
+    font-size: 24px;
+    text-decoration: none;
+    background-color: white;
+    color: rgb(57, 164, 207);
+    border-radius: 50px;
+    padding: 5px 15px;
+}
+
+#header{
+    background-image: url("img/Stadio_San_Paolo_Serie_A.jpg");
+    background-size: cover;
+    height: 40vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header h1{
+    color: white;
+    font-size: 50px;
+    text-shadow: 0 0 2px white;
+}
+#header h1:hover{
+    text-shadow: 0 0 5px white;
+}
+
+#central_img{
+    background-color: blue;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    margin: -50px calc(50% - 40px) 0 calc(50% - 40px);
+}
+
+section.section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    margin: auto;
+    margin-bottom: 80px;
+}
+
+.section .section-title{
+    text-shadow: 0 0 2px blue;
+}
+
+.section .section-paragraph{
+    margin: 20px 60px 10px 60px;
+    color: rgb(71, 27, 205);
+    background-color: white;
+    border-radius: 40px;
+    padding: 20px;
+}
+
+.section img{
+    width: 600px;
+    border-radius: 30px;
+}
+
+#footer{
+    background-image: url(img/pitch.jpeg);
+    height: 100px;
+    text-align: center;
+}
+
+#transparency_box{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#transparency_box:hover{
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#footer p{
+    font-size: 18px;
+    padding-top: 40px;
+}
