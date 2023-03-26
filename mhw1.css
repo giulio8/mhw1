@@ -2,6 +2,8 @@ body{ /* c'è un solo body*/
     margin: 0;
     background-color: rgb(110, 168, 239);
     color: white;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
 }
 
 #navbar{
@@ -14,19 +16,40 @@ body{ /* c'è un solo body*/
 
 #navbar .nav-link{
     font-weight: bold;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-decoration: none;
-    background-color: white;
+    background-color: azure;
     color: rgb(57, 164, 207);
     border-radius: 50px;
     padding: 5px 15px;
 }
 
+#menu {
+    display: none;
+}
+    
+#menu .small-line-menu {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+}
+
 #header{
     background-image: url("img/Stadio_San_Paolo_Serie_A.jpg");
     background-size: cover;
-    height: 40vh;
+    height: 500px;
     margin: 0;
+    text-align: center;
+}
+
+#overlay {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: relative;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,50 +57,107 @@ body{ /* c'è un solo body*/
 
 #header h1{
     color: white;
-    font-size: 50px;
     text-shadow: 0 0 2px white;
+    font-size: 2.7rem;
+    max-width: 780px;
 }
 #header h1:hover{
     text-shadow: 0 0 5px white;
 }
 
-#central_img{
-    background-color: blue;
+#central_div{
+    margin-top: -50px;
+    position: relative;
+    margin-bottom: 60px;
+}
+
+#central_div img{
     border-radius: 100%;
-    width: 80px;
-    height: 80px;
-    margin: -50px calc(50% - 40px) 0 calc(50% - 40px);
+    border: 2px solid white;
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /*necessario per coprire il riquadro senza deformare l'immagine
+    (in alternativa potevamo usare un background image al div e usare background-size: cover)*/
+}
+
+#central_div p{
+    margin: 5px 0;
+}
+
+#central_div #nome{
+    font-size: 1.2rem;
+}
+
+#central_div #last_update{
+    font-size: 0.9rem;
 }
 
 section.section{
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 80%;
+    margin: auto;
+    margin-bottom: 120px;
+}
+
+.section .section-number{
+    font-size: 3rem;
+    text-decoration: dotted;
+    padding-top: 20px;
+}
+
+.section .section-body{
+    width: 66.7vw;
+    padding-left: 40px;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    width: 800px;
-    margin: auto;
-    margin-bottom: 80px;
 }
 
 .section .section-title{
     text-shadow: 0 0 2px blue;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    color: floralwhite;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
 }
 
 .section .section-paragraph{
-    margin: 20px 60px 10px 60px;
+    margin: 20px 0;
+    width: 100%;
+    box-sizing: border-box; /* serviva per settare la larghezza al 100% 
+    tenendo conto anche del padding */
     color: rgb(71, 27, 205);
-    background-color: white;
+    background-color: azure;
+    font-size: 1rem;
+    line-height: 1.4em;
     border-radius: 40px;
     padding: 20px;
+    text-align: left;
+}
+
+.section .section-paragraph em.emphasis{
+    color: red;
+    font-style: italic;
+}
+
+.section .section-comment{
+    line-height: 1.8em;
+    font-size: 1.2em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-style: italic;
+    color: chocolate;
 }
 
 .section img{
-    width: 600px;
-    border-radius: 30px;
+    width: 100%;
+    border-radius: 40px;
 }
 
 #footer{
     background-image: url(img/pitch.jpeg);
-    height: 100px;
+    height: 120px;
     text-align: center;
 }
 
@@ -93,5 +173,36 @@ section.section{
 
 #footer p{
     font-size: 18px;
-    padding-top: 40px;
+    padding: 40px 10% 0 10%;
+}
+
+@media (max-width: 500px){
+    html{
+        font-size: 22px;
+    }
+    
+    #navbar{
+        display: none;
+    }
+
+    section.section{
+        width: 85%;
+    }
+
+    .section .section-number{
+        display: none;
+    }
+
+    .section .section-body{
+        width: auto;
+        padding-left: 0;
+    }
+
+    #footer p{
+        font-size: 1em;
+    }
+    #menu
+    {
+        display: block;
+    }
 }
